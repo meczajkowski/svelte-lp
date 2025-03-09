@@ -36,7 +36,6 @@
 <style>
 	.about {
 		display: flex;
-		align-items: stretch;
 		gap: 3rem;
 	}
 
