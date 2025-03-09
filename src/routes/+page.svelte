@@ -3,6 +3,7 @@
 	import Section from '$lib/components/ui/Section.svelte';
 	import SectionHeader from '$lib/components/ui/SectionHeader.svelte';
 	import Button from '$lib/components/ui/Button.svelte';
+	import AboutSection from '$lib/components/ui/AboutSection.svelte';
 	import { ButtonVariant, ButtonSize } from '$lib/types';
 	import type { PageProps } from './$types';
 
@@ -33,10 +34,7 @@
 	</div>
 </Section>
 
-<Section id="o-nas">
-	<SectionHeader title={sections.about.title} />
-	<p>{sections.about.description}</p>
-</Section>
+<AboutSection data={sections.about} />
 
 <Section id="portfolio">
 	<SectionHeader title={sections.portfolio.title} />
@@ -57,11 +55,13 @@
 		background-image: url('/images/hero.jpg');
 		background-size: cover;
 		background-position: center;
+		position: relative;
 	}
 
 	.hero__overlay {
 		content: '';
 		position: absolute;
+		overflow: hidden;
 		top: 0;
 		left: 0;
 		width: 100%;

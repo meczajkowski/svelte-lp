@@ -90,6 +90,14 @@ export type ServicesPageData = {
 	};
 };
 
+export type AboutSectionData = {
+	title: string;
+	description: string;
+	imageSrc: string;
+	imageAlt: string;
+	ctaText: string;
+	ctaHref: string;
+};
 // Home page data structure
 export type HomeData = {
 	hero: {
@@ -104,10 +112,7 @@ export type HomeData = {
 			ctaText: string;
 			ctaHref: string;
 		};
-		about: {
-			title: string;
-			description: string;
-		};
+		about: AboutSectionData;
 		portfolio: {
 			title: string;
 			description: string;
