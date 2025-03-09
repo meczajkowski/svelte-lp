@@ -30,11 +30,6 @@
 		margin: 2rem 0;
 	}
 
-	.service-grid__item {
-		display: flex;
-		height: 100%;
-	}
-
 	@media (max-width: 768px) {
 		.service-grid {
 			grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));

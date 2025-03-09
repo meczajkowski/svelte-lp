@@ -5,9 +5,9 @@ import type { ServiceBasic, HomeData, ServicesPageData, ServicePageData } from '
 export const links = [
 	{ label: 'Strona główna', href: '/' },
 	{ label: 'Usługi', href: '/uslugi' },
-	{ label: 'O nas', href: '/o-nas' },
-	{ label: 'Realizacje', href: '/realizacje' },
-	{ label: 'Kontakt', href: '/kontakt' }
+	{ label: 'O nas', href: '/#o-nas' },
+	{ label: 'Realizacje', href: '/#realizacje' },
+	{ label: 'Kontakt', href: '/#kontakt' }
 ];
 
 // Home page data
@@ -28,7 +28,12 @@ export const homeData: HomeData = {
 		},
 		about: {
 			title: 'O Nas',
-			description: 'Tutaj będzie sekcja o firmie'
+			description:
+				'Centrum Reklamowe działa na rynku od ponad 15 lat, oferując kompleksowe usługi poligraficzne i reklamowe dla klientów indywidualnych oraz firm. Nasz zespół doświadczonych specjalistów dba o najwyższą jakość każdego projektu, wykorzystując nowoczesny sprzęt i innowacyjne technologie. Dzięki indywidualnemu podejściu do każdego zlecenia, jesteśmy w stanie sprostać nawet najbardziej wymagającym oczekiwaniom. Zaufało nam już ponad 500 firm z Wrocławia i okolic. Dołącz do grona zadowolonych klientów i przekonaj się, że reklama może być skuteczna i przystępna cenowo.',
+			imageSrc: '/images/about-us.webp',
+			imageAlt: 'Zespół Centrum Reklamowego przy pracy',
+			ctaText: 'Poznaj naszą historię',
+			ctaHref: '/#o-nas'
 		},
 		portfolio: {
 			title: 'Nasze Realizacje',
@@ -83,7 +88,7 @@ export const pageData: {
 			buttons: [
 				{
 					text: 'Skontaktuj się',
-					href: '/kontakt',
+					href: '/#kontakt',
 					variant: ButtonVariant.Primary
 				},
 				{
