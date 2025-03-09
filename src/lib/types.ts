@@ -98,6 +98,15 @@ export type AboutSectionData = {
 	ctaText: string;
 	ctaHref: string;
 };
+
+export type PortfolioItem = {
+	id: string;
+	title: string;
+	description: string;
+	imageUrl: string;
+	category?: string;
+};
+
 // Home page data structure
 export type HomeData = {
 	hero: {
@@ -116,6 +125,7 @@ export type HomeData = {
 		portfolio: {
 			title: string;
 			description: string;
+			items?: PortfolioItem[];
 		};
 		contact: {
 			title: string;

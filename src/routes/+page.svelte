@@ -4,6 +4,7 @@
 	import SectionHeader from '$lib/components/ui/SectionHeader.svelte';
 	import Button from '$lib/components/ui/Button.svelte';
 	import AboutSection from '$lib/components/ui/AboutSection.svelte';
+	import PortfolioSlider from '$lib/components/portfolio/PortfolioSlider.svelte';
 	import { ButtonVariant, ButtonSize } from '$lib/types';
 	import type { PageProps } from './$types';
 
@@ -38,7 +39,10 @@
 
 <Section id="portfolio">
 	<SectionHeader title={sections.portfolio.title} />
-	<p>{sections.portfolio.description}</p>
+	<p class="portfolio-description">{sections.portfolio.description}</p>
+	{#if sections.portfolio.items && sections.portfolio.items.length > 0}
+		<PortfolioSlider items={sections.portfolio.items} />
+	{/if}
 </Section>
 
 <Section id="kontakt">
@@ -103,6 +107,12 @@
 	.services__cta {
 		margin-top: 2rem;
 		text-align: center;
+	}
+
+	.portfolio-description {
+		text-align: center;
+		max-width: 800px;
+		margin: 0 auto 2rem auto;
 	}
 
 	@media (max-width: 768px) {
