@@ -1,6 +1,8 @@
 <script lang="ts">
+	import type { Link } from '$lib/types';
+
 	type Props = {
-		links: { label: string; href: string }[];
+		links: Link[];
 	};
 
 	let { links }: Props = $props();
@@ -62,7 +64,7 @@
 	.company-name {
 		font-size: 1.5rem;
 		font-weight: 700;
-		color: #333;
+		color: var(--color-text);
 		margin-left: 0.5rem;
 	}
 
@@ -76,7 +78,7 @@
 	}
 
 	.nav-links a {
-		color: var(--text-color);
+		color: var(--color-text);
 		text-decoration: none;
 		font-weight: 500;
 		transition: color 0.2s;
@@ -84,7 +86,7 @@
 	}
 
 	.nav-links a:hover {
-		color: var(--primary-color-dark);
+		color: var(--color-primary-dark);
 	}
 
 	.mobile-menu-button {
@@ -99,7 +101,7 @@
 		display: block;
 		width: 24px;
 		height: 2px;
-		background-color: var(--text-color);
+		background-color: var(--color-text);
 		position: relative;
 		transition: background-color 0.3s;
 	}
@@ -110,7 +112,7 @@
 		position: absolute;
 		width: 24px;
 		height: 2px;
-		background-color: var(--text-color);
+		background-color: var(--color-text);
 		transition: transform 0.3s;
 	}
 
@@ -156,7 +158,7 @@
 			left: 0;
 			right: 0;
 			flex-direction: column;
-			background-color: var(--background-color);
+			background-color: var(--color-background);
 			z-index: 999;
 			padding: 1.5rem;
 			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);

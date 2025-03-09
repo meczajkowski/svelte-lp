@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Navbar from '$lib/components/Navbar.svelte';
-	import '../globals.css';
+	import Navbar from '$lib/components/ui/Navbar.svelte';
 	import type { LayoutProps } from './$types';
+	import '$lib/globals.css';
 
 	let { data, children }: LayoutProps = $props();
 </script>
@@ -18,6 +18,6 @@
 
 <style>
 	main {
-		padding-top: 60px;
+		padding-block: 60px;
 	}
 </style>

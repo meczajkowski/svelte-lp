@@ -1,114 +1,116 @@
 <script lang="ts">
+	import ServiceGrid from '$lib/components/services/ServiceGrid.svelte';
+	import Section from '$lib/components/ui/Section.svelte';
+	import SectionHeader from '$lib/components/ui/SectionHeader.svelte';
+	import Button from '$lib/components/ui/Button.svelte';
+	import { ButtonVariant, ButtonSize } from '$lib/types';
 	import type { PageProps } from './$types';
 
 	let { data }: PageProps = $props();
+	const { sections } = data;
 </script>
 
 <section class="hero" id="home">
-	<div class="container">
-		<div class="hero-content">
-			<h1>{data.hero.title}</h1>
-			<p>{data.hero.subtitle}</p>
-			<a href="#kontakt" class="cta-button">{data.hero.ctaText}</a>
+	<div class="hero__overlay"></div>
+	<div class="hero__container">
+		<div class="hero__content">
+			<h1 class="hero__title">{data.hero.title}</h1>
+			<p class="hero__subtitle">{data.hero.subtitle}</p>
+			<Button href="#kontakt" variant={ButtonVariant.Primary} size={ButtonSize.Large}>
+				{data.hero.ctaText}
+			</Button>
 		</div>
 	</div>
 </section>
 
-<section id="uslugi" class="services">
-	<div class="container">
-		<h2>Nasze Usługi</h2>
-		<p>Tutaj będzie lista usług</p>
+<Section id="uslugi">
+	<SectionHeader title={sections.services.title} description={sections.services.description} />
+	<ServiceGrid services={data.services} />
+	<div class="services__cta">
+		<Button href={sections.services.ctaHref} variant={ButtonVariant.Secondary}>
+			{sections.services.ctaText}
+		</Button>
 	</div>
-</section>
+</Section>
 
-<section id="o-nas" class="about">
-	<div class="container">
-		<h2>O Nas</h2>
-		<p>Tutaj będzie sekcja o firmie</p>
-	</div>
-</section>
+<Section id="o-nas">
+	<SectionHeader title={sections.about.title} />
+	<p>{sections.about.description}</p>
+</Section>
 
-<section id="portfolio" class="portfolio">
-	<div class="container">
-		<h2>Nasze Realizacje</h2>
-		<p>Tutaj będzie portfolio</p>
-	</div>
-</section>
+<Section id="portfolio">
+	<SectionHeader title={sections.portfolio.title} />
+	<p>{sections.portfolio.description}</p>
+</Section>
 
-<section id="kontakt" class="contact">
-	<div class="container">
-		<h2>Kontakt</h2>
-		<p>Tutaj będzie formularz kontaktowy</p>
-	</div>
-</section>
+<Section id="kontakt">
+	<SectionHeader title={sections.contact.title} />
+	<p>{sections.contact.description}</p>
+</Section>
 
 <style>
-	.container {
-		max-width: 1200px;
-		margin: 0 auto;
-		padding: 0 2rem;
-	}
-
-	section {
-		padding: 5rem 0;
-	}
-
 	.hero {
 		min-height: 85vh;
 		display: flex;
 		align-items: center;
-		background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* TODO: change to image */
+		/* background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); TODO: change to image */
+		background-image: url('/images/hero.jpg');
+		background-size: cover;
+		background-position: center;
 	}
 
-	.hero-content {
+	.hero__overlay {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.5);
+		backdrop-filter: blur(4px);
+	}
+
+	.hero__container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 2rem;
+		width: 100%;
+		position: relative;
+		z-index: 1;
+	}
+
+	.hero__content {
 		max-width: 700px;
+		position: relative;
+		margin: 0 auto;
+		z-index: 900;
 	}
 
-	h1 {
+	.hero__title {
 		font-size: 3rem;
 		line-height: 1.2;
 		margin-bottom: 1.5rem;
-		color: var(--text-color);
+		color: var(--color-on-primary);
 	}
 
-	h2 {
-		font-size: 2.5rem;
+	.hero__subtitle {
+		font-size: 1.25rem;
+		line-height: 1.6;
+		color: var(--color-on-primary);
 		margin-bottom: 2rem;
+	}
+
+	.services__cta {
+		margin-top: 2rem;
 		text-align: center;
 	}
 
-	.hero p {
-		font-size: 1.25rem;
-		line-height: 1.6;
-		color: var(--text-color-light);
-		margin-bottom: 2rem;
-	}
-
-	.cta-button {
-		display: inline-block;
-		background-color: var(--primary-color);
-		color: var(--on-primary-color);
-		padding: 0.8rem 1.8rem;
-		border-radius: 4px;
-		font-weight: 500;
-		text-decoration: none;
-		transition: background-color 0.2s;
-	}
-
-	.cta-button:hover {
-		background-color: var(--primary-color-dark);
-	}
-
 	@media (max-width: 768px) {
-		h1 {
+		.hero__title {
 			font-size: 2.2rem;
 		}
 
-		h2 {
-			font-size: 1.8rem;
-		}
-
-		.hero p {
+		.hero__subtitle {
 			font-size: 1rem;
 		}
 	}
