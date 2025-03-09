@@ -37,7 +37,48 @@ export const homeData: HomeData = {
 		},
 		portfolio: {
 			title: 'Nasze Realizacje',
-			description: 'Tutaj będzie portfolio'
+			description:
+				'Poniżej prezentujemy wybrane projekty, które zrealizowaliśmy dla naszych klientów. Każdy projekt jest dowodem naszego zaangażowania w jakość i satysfakcję klienta.',
+			items: [
+				{
+					id: 'portfolio-1',
+					title: 'Kampania reklamowa dla restauracji',
+					description:
+						'Kompleksowa kampania reklamowa obejmująca ulotki, plakaty i banery dla lokalnej restauracji.',
+					imageUrl: '/images/services/printing.webp',
+					category: 'Druk'
+				},
+				{
+					id: 'portfolio-2',
+					title: 'Identyfikacja wizualna dla firmy budowlanej',
+					description:
+						'Projekt logo, wizytówek i materiałów firmowych dla przedsiębiorstwa budowlanego.',
+					imageUrl: '/images/services/clothing.webp',
+					category: 'Identyfikacja wizualna'
+				},
+				{
+					id: 'portfolio-3',
+					title: 'Nadruki na odzieży dla zespołu sportowego',
+					description:
+						'Wykonanie nadruków na koszulkach i akcesoriach dla lokalnej drużyny piłkarskiej.',
+					imageUrl: '/images/services/copy.jpg',
+					category: 'Nadruki'
+				},
+				{
+					id: 'portfolio-4',
+					title: 'Banery reklamowe dla wydarzenia kulturalnego',
+					description: 'Projekt i wykonanie banerów reklamowych dla festiwalu miejskiego.',
+					imageUrl: '/images/services/printing.webp',
+					category: 'Wielki format'
+				},
+				{
+					id: 'portfolio-5',
+					title: 'Katalog produktów dla sklepu meblowego',
+					description: 'Projekt i druk katalogu produktów dla lokalnego sklepu z meblami.',
+					imageUrl: '/images/services/clothing.webp',
+					category: 'Druk'
+				}
+			]
 		},
 		contact: {
 			title: 'Kontakt',
@@ -52,14 +93,14 @@ export const services: ServiceBasic[] = [
 		id: 'printing',
 		title: 'Druk ulotek, plakatów i wizytówek',
 		description: 'Tworzymy ulotki, plakaty i wizytówki, które przyciągną uwagę.',
-		imageUrl: '/images/services/printing.jpg',
+		imageUrl: '/images/services/printing.webp',
 		href: '/uslugi/druk'
 	},
 	{
 		id: 'clothing-printing',
 		title: 'Nadruki na ubraniach i akcesoriach',
 		description: 'Oferujemy nadruki na odzieży, piłkach i smyczach.',
-		imageUrl: '/images/services/clothing.jpg',
+		imageUrl: '/images/services/clothing.webp',
 		href: '/uslugi/nadruki'
 	},
 	{
