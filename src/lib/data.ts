@@ -52,14 +52,14 @@ export const services: ServiceBasic[] = [
 		id: 'printing',
 		title: 'Druk ulotek, plakatów i wizytówek',
 		description: 'Tworzymy ulotki, plakaty i wizytówki, które przyciągną uwagę.',
-		imageUrl: '/images/services/printing.jpg',
+		imageUrl: '/images/services/printing.webp',
 		href: '/uslugi/druk'
 	},
 	{
 		id: 'clothing-printing',
 		title: 'Nadruki na ubraniach i akcesoriach',
 		description: 'Oferujemy nadruki na odzieży, piłkach i smyczach.',
-		imageUrl: '/images/services/clothing.jpg',
+		imageUrl: '/images/services/clothing.webp',
 		href: '/uslugi/nadruki'
 	},
 	{
