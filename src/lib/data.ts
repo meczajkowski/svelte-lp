@@ -82,7 +82,7 @@ export const homeData: HomeData = {
 		},
 		contact: {
 			title: 'Kontakt',
-			description: 'Tutaj będzie formularz kontaktowy'
+			description: 'Skontaktuj się z nami, aby omówić szczegóły Twojego projektu.'
 		}
 	}
 };
