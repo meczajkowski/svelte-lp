@@ -50,10 +50,9 @@
 
 <style>
 	.hero {
-		min-height: 85vh;
+		min-height: 92vh;
 		display: flex;
 		align-items: center;
-		/* background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); TODO: change to image */
 		background-image: url('/images/hero.jpg');
 		background-size: cover;
 		background-position: center;

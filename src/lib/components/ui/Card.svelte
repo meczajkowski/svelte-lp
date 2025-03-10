@@ -48,16 +48,8 @@
 		border-radius: 8px;
 		overflow: hidden;
 		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-		transition:
-			transform 0.3s,
-			box-shadow 0.3s;
 		background-color: var(--color-background);
 		height: 100%;
-	}
-
-	.card:hover {
-		transform: translateY(-5px);
-		box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 	}
 
 	.card__image {
@@ -71,11 +63,6 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		transition: transform 0.3s;
-	}
-
-	.card:hover .card__img {
-		transform: scale(1.05);
 	}
 
 	.card__placeholder {

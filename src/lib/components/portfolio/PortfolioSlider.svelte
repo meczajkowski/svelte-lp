@@ -219,7 +219,7 @@
 	.portfolio__indicators {
 		display: flex;
 		justify-content: center;
-		margin-top: 1rem;
+		margin-top: 2rem;
 	}
 
 	.portfolio__indicator {
