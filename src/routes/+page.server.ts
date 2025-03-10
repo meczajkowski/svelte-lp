@@ -49,7 +49,7 @@ export const actions: Actions = {
 		}
 
 		try {
-			await new Promise((resolve) => setTimeout(resolve, 10000));
+			await new Promise((resolve) => setTimeout(resolve, 3000));
 			console.log('Form submitted:', { name, email, subject, message });
 			return {
 				success: 'Dziękujemy za wiadomość! Odpowiemy najszybciej jak to możliwe.'

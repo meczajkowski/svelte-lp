@@ -1,13 +1,14 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
 	import { ButtonType, ButtonVariant, ButtonSize } from '$lib/types';
+	import type { ActionData } from '../../../routes/$types';
 	import Button from './Button.svelte';
 	import FormAlert from './form/FormAlert.svelte';
 	import TextArea from './form/TextArea.svelte';
 	import TextInput from './form/TextInput.svelte';
 
 	type Props = {
-		form?: any;
+		form?: ActionData;
 	};
 
 	let { form }: Props = $props();
@@ -89,8 +90,7 @@
 
 <style>
 	.contact-form {
-		max-width: 600px;
-		margin: 0 auto;
+		width: 100%;
 	}
 
 	.contact-form__submit {

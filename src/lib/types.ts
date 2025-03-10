@@ -58,6 +58,10 @@ export type PricingItem = {
 export type ContactInfo = {
 	title: string;
 	description: string;
+	imageSrc?: string;
+	imageAlt?: string;
+	phone?: string;
+	email?: string;
 };
 
 // Page specific data for service subpages
@@ -127,9 +131,6 @@ export type HomeData = {
 			description: string;
 			items?: PortfolioItem[];
 		};
-		contact: {
-			title: string;
-			description: string;
-		};
+		contact: ContactInfo;
 	};
 };

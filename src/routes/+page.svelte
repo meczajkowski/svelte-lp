@@ -5,7 +5,7 @@
 	import Button from '$lib/components/ui/Button.svelte';
 	import AboutSection from '$lib/components/ui/AboutSection.svelte';
 	import PortfolioSlider from '$lib/components/portfolio/PortfolioSlider.svelte';
-	import ContactForm from '$lib/components/ui/ContactForm.svelte';
+	import ContactSection from '$lib/components/sections/ContactSection.svelte';
 	import { ButtonVariant, ButtonSize } from '$lib/types';
 	import type { PageProps } from './$types';
 
@@ -46,11 +46,7 @@
 	{/if}
 </Section>
 
-<Section id="kontakt">
-	<SectionHeader title={sections.contact.title} />
-	<p class="contact-description">{sections.contact.description}</p>
-	<ContactForm {form} />
-</Section>
+<ContactSection data={sections.contact} {form} />
 
 <style>
 	.hero {
@@ -112,12 +108,6 @@
 	}
 
 	.portfolio-description {
-		text-align: center;
-		max-width: 800px;
-		margin: 0 auto 2rem auto;
-	}
-
-	.contact-description {
 		text-align: center;
 		max-width: 800px;
 		margin: 0 auto 2rem auto;

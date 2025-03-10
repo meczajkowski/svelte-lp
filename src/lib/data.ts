@@ -82,7 +82,11 @@ export const homeData: HomeData = {
 		},
 		contact: {
 			title: 'Kontakt',
-			description: 'Skontaktuj się z nami, aby omówić szczegóły Twojego projektu.'
+			description: 'Skontaktuj się z nami, aby omówić szczegóły Twojego projektu.',
+			imageSrc: '/images/about-us.webp',
+			imageAlt: 'Skontaktuj się z nami',
+			phone: '+48 123 456 789',
+			email: 'kontakt@example.com'
 		}
 	}
 };
