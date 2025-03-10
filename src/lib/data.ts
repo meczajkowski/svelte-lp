@@ -82,7 +82,11 @@ export const homeData: HomeData = {
 		},
 		contact: {
 			title: 'Kontakt',
-			description: 'Tutaj będzie formularz kontaktowy'
+			description: 'Skontaktuj się z nami, aby omówić szczegóły Twojego projektu.',
+			imageSrc: '/images/about-us.webp',
+			imageAlt: 'Skontaktuj się z nami',
+			phone: '+48 123 456 789',
+			email: 'kontakt@example.com'
 		}
 	}
 };
@@ -94,14 +98,14 @@ export const services: ServiceBasic[] = [
 		title: 'Druk ulotek, plakatów i wizytówek',
 		description: 'Tworzymy ulotki, plakaty i wizytówki, które przyciągną uwagę.',
 		imageUrl: '/images/services/printing.webp',
-		href: '/uslugi/druk'
+		href: '/uslugi/ksero-plotery'
 	},
 	{
 		id: 'clothing-printing',
 		title: 'Nadruki na ubraniach i akcesoriach',
 		description: 'Oferujemy nadruki na odzieży, piłkach i smyczach.',
 		imageUrl: '/images/services/clothing.webp',
-		href: '/uslugi/nadruki'
+		href: '/uslugi/ksero-plotery'
 	},
 	{
 		id: 'copy-plotter',

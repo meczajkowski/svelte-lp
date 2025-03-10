@@ -18,10 +18,5 @@
 <style>
 	.service-card {
 		height: 100%;
-		transition: transform 0.3s;
-	}
-
-	.service-card:hover {
-		transform: translateY(-5px);
 	}
 </style>

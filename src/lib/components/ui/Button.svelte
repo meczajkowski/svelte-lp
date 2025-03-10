@@ -8,6 +8,7 @@
 		size?: ButtonSize;
 		type?: ButtonType;
 		children: Snippet;
+		disabled?: boolean;
 	};
 
 	let {
@@ -15,16 +16,21 @@
 		href,
 		variant = ButtonVariant.Primary,
 		size = ButtonSize.Medium,
-		type = ButtonType.Button
+		type = ButtonType.Button,
+		disabled = false
 	}: Props = $props();
 </script>
 
-{#if href}
+{#if href && !disabled}
 	<a {href} class="btn btn--{variant} btn--{size}">
 		{@render children()}
 	</a>
+{:else if href && disabled}
+	<span class="btn btn--{variant} btn--{size} btn--disabled">
+		{@render children()}
+	</span>
 {:else}
-	<button {type} class="btn btn--{variant} btn--{size}">
+	<button {type} class="btn btn--{variant} btn--{size}" class:btn--disabled={disabled} {disabled}>
 		{@render children()}
 	</button>
 {/if}
@@ -46,7 +52,7 @@
 		color: var(--color-on-primary);
 	}
 
-	.btn--primary:hover {
+	.btn--primary:hover:not(.btn--disabled) {
 		background-color: var(--color-primary-dark);
 	}
 
@@ -56,8 +62,14 @@
 		border: 1px solid var(--color-primary);
 	}
 
-	.btn--secondary:hover {
+	.btn--secondary:hover:not(.btn--disabled) {
 		background-color: rgba(0, 112, 243, 0.1);
+	}
+
+	.btn--disabled {
+		opacity: 0.65;
+		cursor: not-allowed;
+		pointer-events: none;
 	}
 
 	.btn--small {

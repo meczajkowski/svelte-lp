@@ -5,10 +5,11 @@
 	import Button from '$lib/components/ui/Button.svelte';
 	import AboutSection from '$lib/components/ui/AboutSection.svelte';
 	import PortfolioSlider from '$lib/components/portfolio/PortfolioSlider.svelte';
+	import ContactSection from '$lib/components/sections/ContactSection.svelte';
 	import { ButtonVariant, ButtonSize } from '$lib/types';
 	import type { PageProps } from './$types';
 
-	let { data }: PageProps = $props();
+	let { data, form }: PageProps = $props();
 	const { sections } = data;
 </script>
 
@@ -37,7 +38,7 @@
 
 <AboutSection data={sections.about} />
 
-<Section id="portfolio">
+<Section id="realizacje">
 	<SectionHeader title={sections.portfolio.title} />
 	<p class="portfolio-description">{sections.portfolio.description}</p>
 	{#if sections.portfolio.items && sections.portfolio.items.length > 0}
@@ -45,17 +46,13 @@
 	{/if}
 </Section>
 
-<Section id="kontakt">
-	<SectionHeader title={sections.contact.title} />
-	<p>{sections.contact.description}</p>
-</Section>
+<ContactSection data={sections.contact} {form} />
 
 <style>
 	.hero {
-		min-height: 85vh;
+		min-height: 92vh;
 		display: flex;
 		align-items: center;
-		/* background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); TODO: change to image */
 		background-image: url('/images/hero.jpg');
 		background-size: cover;
 		background-position: center;

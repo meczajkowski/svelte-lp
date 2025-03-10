@@ -11,7 +11,7 @@
 
 	let {
 		id = '',
-		padding = '5rem 0',
+		padding = '4rem 0',
 		bgColor = 'transparent',
 
 		children
@@ -32,7 +32,7 @@
 
 	@media (max-width: 768px) {
 		.section {
-			padding: 3rem 0;
+			padding: 2rem 0;
 		}
 	}
 </style>

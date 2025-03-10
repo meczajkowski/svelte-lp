@@ -8,10 +8,24 @@
 
 	--color-background: #fff;
 	--color-background-alt: #f5f5f5;
+
 	--color-text: #333;
 	--color-text-light: #555;
+	--color-text-muted: #6c757d;
+
+	--color-success: #28a745;
+	--color-success-dark: #1e7e34;
+
+	--color-error: #dc3545;
+	--color-error-dark: #c82333;
+
+	--color-disabled-bg: #f5f5f5;
+
+	--color-border: #ddd;
 
 	--radius-btn: 4px;
+	--radius-input: 4px;
+	--radius-lg: 8px;
 }
 
 * {
