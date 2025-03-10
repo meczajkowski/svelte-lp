@@ -11,23 +11,15 @@
 		imageAlt?: string;
 		phone?: string;
 		email?: string;
-		form?: ActionData;
 	};
 
 	type Props = {
 		data: ContactData;
+		form: ActionData;
 	};
 
-	let { data }: Props = $props();
-	const {
-		title,
-		description,
-		imageSrc = '/images/about-us.webp',
-		imageAlt = 'Skontaktuj się z nami',
-		phone = '+48 123 456 789',
-		email = 'kontakt@example.com',
-		form
-	} = data;
+	let { data, form }: Props = $props();
+	const { title, description, imageSrc, imageAlt, phone, email } = data;
 </script>
 
 <Section id="kontakt">
