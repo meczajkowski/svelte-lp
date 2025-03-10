@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Section from './Section.svelte';
-	import SectionHeader from './SectionHeader.svelte';
-	import Button from './Button.svelte';
+	import Section from '$lib/components/ui/layout/Section.svelte';
+	import SectionHeader from '$lib/components/ui/layout/SectionHeader.svelte';
+	import Button from '$lib/components/ui/Button.svelte';
 	import { ButtonVariant, type AboutSectionData } from '$lib/types';
 
 	type Props = {

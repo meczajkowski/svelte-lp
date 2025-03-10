@@ -1,7 +1,7 @@
 <script lang="ts">
 	import ServiceGrid from '$lib/components/services/ServiceGrid.svelte';
-	import Container from '$lib/components/ui/Container.svelte';
-	import PageHeader from '$lib/components/ui/PageHeader.svelte';
+	import Container from '$lib/components/ui/layout/Container.svelte';
+	import PageHeader from '$lib/components/ui/layout/PageHeader.svelte';
 	import CTASection from '$lib/components/ui/CTASection.svelte';
 	import type { PageProps } from './$types';
 

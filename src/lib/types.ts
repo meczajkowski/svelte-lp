@@ -126,6 +126,11 @@ export type HomeData = {
 			ctaHref: string;
 		};
 		about: AboutSectionData;
+		cta: {
+			title: string;
+			description: string;
+			buttons: CTAButton[];
+		};
 		portfolio: {
 			title: string;
 			description: string;

@@ -2,10 +2,10 @@
 	import { enhance } from '$app/forms';
 	import { ButtonType, ButtonVariant, ButtonSize } from '$lib/types';
 	import type { ActionData } from '../../../routes/$types';
-	import Button from './Button.svelte';
-	import FormAlert from './form/FormAlert.svelte';
-	import TextArea from './form/TextArea.svelte';
-	import TextInput from './form/TextInput.svelte';
+	import Button from '../ui/Button.svelte';
+	import FormAlert from '../ui/form/FormAlert.svelte';
+	import TextArea from '../ui/form/TextArea.svelte';
+	import TextInput from '../ui/form/TextInput.svelte';
 
 	type Props = {
 		form?: ActionData;

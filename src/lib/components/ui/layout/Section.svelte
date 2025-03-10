@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
-	import Container from '$lib/components/ui/Container.svelte';
+	import Container from '$lib/components/ui/layout/Container.svelte';
 
 	type Props = {
 		id?: string;

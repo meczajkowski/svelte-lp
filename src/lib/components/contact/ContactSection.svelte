@@ -1,12 +1,20 @@
 <script lang="ts">
-	import type { ContactInfo } from '$lib/types';
 	import type { ActionData } from '../../../routes/$types';
-	import ContactForm from '../ui/ContactForm.svelte';
-	import Section from '../ui/Section.svelte';
-	import SectionHeader from '../ui/SectionHeader.svelte';
+	import ContactForm from '$lib/components/contact/ContactForm.svelte';
+	import Section from '$lib/components/ui/layout/Section.svelte';
+	import SectionHeader from '$lib/components/ui/layout/SectionHeader.svelte';
+
+	type ContactData = {
+		title: string;
+		description: string;
+		imageSrc?: string;
+		imageAlt?: string;
+		phone?: string;
+		email?: string;
+	};
 
 	type Props = {
-		data: ContactInfo;
+		data: ContactData;
 		form: ActionData;
 	};
 
@@ -102,14 +110,14 @@
 	.contact-section__image-container {
 		position: relative;
 		padding: 1rem;
-		border-radius: var(--radius-lg);
+		border-radius: var(--radius-lg, 8px);
 		overflow: hidden;
 	}
 
 	.contact-section__image {
 		width: 100%;
 		height: 400px;
-		border-radius: var(--radius-lg);
+		border-radius: var(--radius-lg, 8px);
 		box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 		object-fit: cover;
 		display: block;
@@ -138,8 +146,8 @@
 	}
 
 	.contact-section__info {
-		background-color: var(--color-background-alt);
-		border-radius: var(--radius-lg);
+		background-color: var(--color-background-alt, #f8f9fa);
+		border-radius: var(--radius-lg, 8px);
 		padding: 1.5rem;
 		display: flex;
 		flex-direction: column;
@@ -151,12 +159,12 @@
 		display: flex;
 		align-items: center;
 		gap: 0.75rem;
-		color: var(--color-text);
+		color: var(--color-text, #333);
 		font-weight: 500;
 	}
 
 	.contact-section__info-item svg {
-		color: var(--color-primary);
+		color: var(--color-primary, #0070f3);
 		flex-shrink: 0;
 	}
 

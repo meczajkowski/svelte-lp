@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Navbar from '$lib/components/ui/Navbar.svelte';
+	import Navbar from '$lib/components/ui/layout/Navbar.svelte';
 	import type { LayoutProps } from './$types';
 	import '$lib/globals.css';
 

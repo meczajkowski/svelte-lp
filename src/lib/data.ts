@@ -35,6 +35,18 @@ export const homeData: HomeData = {
 			ctaText: 'Poznaj naszą historię',
 			ctaHref: '/#o-nas'
 		},
+		cta: {
+			title: 'Masz pytania?',
+			description: 'Skontaktuj się z nami, a my odpowiemy na wszystkie Twoje pytania.',
+			buttons: [
+				{ text: 'Zadaj pytanie', href: '/#kontakt', variant: ButtonVariant.Primary },
+				{
+					text: 'Zadzwoń do nas: +48 123 456 789',
+					href: 'tel:+48123456789',
+					variant: ButtonVariant.Secondary
+				}
+			]
+		},
 		portfolio: {
 			title: 'Nasze Realizacje',
 			description:
