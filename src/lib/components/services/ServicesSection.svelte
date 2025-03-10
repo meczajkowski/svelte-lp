@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { ButtonVariant } from '$lib/types';
 	import type { ServiceBasic } from '$lib/types';
-	import Button from '../ui/Button.svelte';
-	import Section from '../ui/Section.svelte';
-	import SectionHeader from '../ui/SectionHeader.svelte';
-	import ServiceGrid from '../services/ServiceGrid.svelte';
+	import Button from '$lib/components/ui/Button.svelte';
+	import Section from '$lib/components/ui/layout/Section.svelte';
+	import SectionHeader from '$lib/components/ui/layout/SectionHeader.svelte';
+	import ServiceGrid from '$lib/components/services/ServiceGrid.svelte';
 
 	type ServicesData = {
 		title: string;

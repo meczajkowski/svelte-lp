@@ -1,8 +1,8 @@
 <script lang="ts">
 	import type { ActionData } from '../../../routes/$types';
-	import ContactForm from '../ui/ContactForm.svelte';
-	import Section from '../ui/Section.svelte';
-	import SectionHeader from '../ui/SectionHeader.svelte';
+	import ContactForm from '$lib/components/contact/ContactForm.svelte';
+	import Section from '$lib/components/ui/layout/Section.svelte';
+	import SectionHeader from '$lib/components/ui/layout/SectionHeader.svelte';
 
 	type ContactData = {
 		title: string;

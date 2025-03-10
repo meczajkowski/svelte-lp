@@ -1,8 +1,8 @@
 <script lang="ts">
 	import type { PortfolioItem } from '$lib/types';
-	import Section from '../ui/Section.svelte';
-	import SectionHeader from '../ui/SectionHeader.svelte';
-	import PortfolioSlider from '../portfolio/PortfolioSlider.svelte';
+	import Section from '$lib/components/ui/layout/Section.svelte';
+	import SectionHeader from '$lib/components/ui/layout/SectionHeader.svelte';
+	import PortfolioSlider from '$lib/components/portfolio/PortfolioSlider.svelte';
 
 	type PortfolioData = {
 		title: string;

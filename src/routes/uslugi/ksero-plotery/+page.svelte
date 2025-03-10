@@ -1,9 +1,9 @@
 <script lang="ts">
 	import Card from '$lib/components/ui/Card.svelte';
-	import Container from '$lib/components/ui/Container.svelte';
-	import PageHeader from '$lib/components/ui/PageHeader.svelte';
+	import Container from '$lib/components/ui/layout/Container.svelte';
+	import PageHeader from '$lib/components/ui/layout/PageHeader.svelte';
 	import Button from '$lib/components/ui/Button.svelte';
-	import SectionHeader from '$lib/components/ui/SectionHeader.svelte';
+	import SectionHeader from '$lib/components/ui/layout/SectionHeader.svelte';
 	import { ButtonVariant } from '$lib/types';
 	import type { PageProps } from './$types';
 
@@ -58,7 +58,7 @@
 				<p class="service__contact-text">
 					{data.contactInfo.description}
 				</p>
-				<Button href="/kontakt" variant={ButtonVariant.Primary}>Skontaktuj się</Button>
+				<Button href="/#kontakt" variant={ButtonVariant.Primary}>Skontaktuj się</Button>
 			</div>
 		</div>
 	</div>
